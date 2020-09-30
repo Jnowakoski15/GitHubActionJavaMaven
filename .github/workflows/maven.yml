@@ -28,13 +28,15 @@ jobs:
         restore-keys: ${{ runner.os }}-m2  
     - name: Test with Maven
       run: mvn -B test --file pom.xml
+      
     - name: Build with Maven
       run: mvn -B compile --file pom.xml
+      
     - name: Push to GitHub Packages
-      uses: docker/build-push-action@v2
+      uses: docker/build-push-action@v1
       with:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: jnowakoski15/GitHubActionJavaMaven/demo
-          ag_with_ref: true
+          repository: jnowakoski15/githubactionjavamaven/demo
+          tag_with_ref: true
