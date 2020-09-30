@@ -32,6 +32,3 @@ jobs:
       run: mvn -B compile --file pom.xml
     - name: Push to GitHub Packages
       uses: docker/build-push-action@v2
-      with:
-          registry: docker.pkg.github.com
-          repository: jnowakoski15/GitHubActionJavaMaven/demo
