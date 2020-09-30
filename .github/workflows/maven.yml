@@ -32,11 +32,11 @@ jobs:
     - name: Build with Maven
       run: mvn -B compile --file pom.xml
       
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v1
-      
     - name: Push to GitHub Packages
-      uses: docker/build-push-action@v2
+      uses: docker/build-push-action@v1
       with:
-          push: true
-          tags: jnowakoski15/demo:latest
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: docker.pkg.github.com
+          repository: jnowakoski15/GitHubActionJavaMaven/demo
+          tag_with_ref: true
