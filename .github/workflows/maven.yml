@@ -34,6 +34,6 @@ jobs:
       uses: docker/build-push-action@v2
       with:
           push: true
-          tags: Jnowakoski15/GitHubActionJavaMaven:latest
+          tags: jnowakoski15/demo:latest
           secrets: |
             GIT_AUTH_TOKEN=${{ secrets.MYTOKEN }}
