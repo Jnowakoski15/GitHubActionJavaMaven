@@ -38,5 +38,5 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
-          repository: jnowakoski15/GitHubActionJavaMaven/demo
+          repository: jnowakoski15/githubactionjavamaven/demo
           tag_with_ref: true
