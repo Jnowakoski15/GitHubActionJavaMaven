@@ -33,8 +33,5 @@ jobs:
     - name: Push to GitHub Packages
       uses: docker/build-push-action@v2
       with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
           registry: docker.pkg.github.com
           repository: jnowakoski15/GitHubActionJavaMaven/demo
-          ag_with_ref: true
